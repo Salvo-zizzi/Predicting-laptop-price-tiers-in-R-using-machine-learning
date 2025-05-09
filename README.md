@@ -58,7 +58,7 @@ The dataset includes variables such as:
   - `ggplot2`
 
 ## How to Run the Project
-1. Place the dataset in the `data/` folder.
-2. Run the main script (`progetto.R` or `.Rmd`) in RStudio or any R environment.
+1. Place the dataset in the `Data/` folder.
+2. Run the main script (`Classification.R`) in RStudio or any R environment.
 3. Output results, including model performance metrics and plots, will be saved in the `output/` folder.
 
