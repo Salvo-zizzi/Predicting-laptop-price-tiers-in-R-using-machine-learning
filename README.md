@@ -1,4 +1,4 @@
-# Predicting-laptop-price-tiers-in-R-using-machine-learning
+# Predicting laptop price tiers in R using machine learning
 ### Author: Salvatore Zizzi  
 
 ## Project Description
