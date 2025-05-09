@@ -1,54 +1,64 @@
-# Predicting laptop price tiers in R using machine learning
+# Predicting Laptop Price Tiers in R Using Machine Learning  
 ### Author: Salvatore Zizzi  
+
+![R Version](https://img.shields.io/badge/R-%3E%3D%204.0-blue)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue)
+![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Last Commit](https://img.shields.io/github/last-commit/yourusername/yourrepo)
 
 ## Project Description
 This project aims to classify laptops into two categories — **High-end** and **Low-end** — based on their technical specifications and price, using machine learning techniques in R.
 
-The dataset includes specs of laptops sold in India, with prices in Indian rupees. The classification uses the average price as a threshold.
+The dataset includes specs of laptops sold in India, with prices in Indian Rupees. The classification uses the average price as a threshold to determine the **High-end** and **Low-end** categories.
 
 ## Dataset
 The dataset includes variables such as:
-- Brand, model, and type
-- CPU, GPU, and memory specifications
-- Operating system
-- Price (used as a qualitative target variable)
+- **Brand, model, and type**  
+- **CPU, GPU, and memory specifications**  
+- **Operating system**  
+- **Price** (used as a qualitative target variable)  
 
 ## Preprocessing
-- Missing data imputation (`opsys`, `memory`)
-- Optimal grouping of categorical variables
-- Removal of highly correlated and near-zero variance variables
+- **Missing Data Imputation**: Imputed missing values for the `opsys` (Operating System) and `memory` columns using the median value for each respective category.
+- **Categorical Variables**: Optimized the grouping of categorical variables such as CPU and GPU models for better model performance.
+- **Feature Removal**: Removed highly correlated and near-zero variance features to improve model accuracy and avoid overfitting.
 
 ## Models Used
-- **Feature selection**: Decision Tree
-- **Trained models**:
+- **Feature Selection**: Used a Decision Tree for feature selection to identify the most relevant features.
+- **Trained Models**:
   - Random Forest  
-  - GLM, PLS, Lasso  
-  - KNN, AdaBoost  
+  - Generalized Linear Models (GLM), Partial Least Squares (PLS), Lasso  
+  - K-Nearest Neighbors (KNN), AdaBoost  
   - C5.0, Gradient Boosting  
   - NodeHarvest, PCA Neural Network  
-  - Neural networks with varying hidden layers
+  - Neural Networks with varying hidden layers
 
 ## Evaluation
-- Metrics: ROC, Lift Curve, Confusion Matrix
-- Selected model: **C5.0** (best trade-off between sensitivity and specificity)
+- **Evaluation Metrics**:  
+  - ROC Curve  
+  - Lift Curve  
+  - Confusion Matrix  
+- **Selected Model**: **C5.0**  
+  The **C5.0** model showed the best trade-off between sensitivity and specificity, offering a balanced performance across multiple metrics. It was selected as the final model.
 
 ## Results
-- The C5.0 model achieved the most stable and balanced performance.
-- Neural networks showed competitive ROC scores, but lower sensitivity.
+- The **C5.0** model achieved the most stable and balanced performance, with a high accuracy rate, precision, and recall.
+- Neural networks demonstrated competitive ROC scores but had lower sensitivity, making them less suitable compared to the **C5.0** model for this specific task.
 
 ## Requirements
-R (version ≥ 4.0)  
-Key packages:
-- `caret`
-- `rpart`
-- `C50`
-- `randomForest`
-- `gbm`
-- `nnet`
-- `pROC`
-- `ggplot2`
+- **R** (version ≥ 4.0)
+- Key Packages:
+  - `caret`
+  - `rpart`
+  - `C50`
+  - `randomForest`
+  - `gbm`
+  - `nnet`
+  - `pROC`
+  - `ggplot2`
 
 ## How to Run the Project
-1. Place the dataset in the `data/` folder
-2. Run the main script (`progetto.R` or `.Rmd`)
-3. Output results will be saved in the `output/` folder
+1. Place the dataset in the `data/` folder.
+2. Run the main script (`progetto.R` or `.Rmd`) in RStudio or any R environment.
+3. Output results, including model performance metrics and plots, will be saved in the `output/` folder.
+
