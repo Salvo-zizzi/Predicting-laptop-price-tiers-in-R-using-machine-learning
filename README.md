@@ -59,6 +59,6 @@ The dataset includes variables such as:
 
 ## How to Run the Project
 1. Place the dataset in the `Data/` folder.
-2. Run the main script (`Classification.R`, in the 'Code/' folder) in RStudio or any R environment.
+2. Run the main script (`Classification.R`, in the `Code/` folder) in RStudio or any R environment.
 3. Output results, including model performance metrics and plots, will be saved in the `output/` folder.
 
