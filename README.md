@@ -12,6 +12,11 @@ This project aims to classify laptops into two categories — **High-end** and *
 The dataset includes specs of laptops sold in India, with prices in Indian Rupees. The classification uses the average price as a threshold to determine the **High-end** and **Low-end** categories.
 
 ## Dataset
+## Dataset Source
+The dataset used in this project is publicly available on [Kaggle](https://www.kaggle.com/datasets/eslamelsolya/laptop-price-prediction).  
+Please download it from there and place the file in the `Data/` folder before running the scripts.
+
+
 The dataset includes variables such as:
 - **Brand, model, and type**  
 - **CPU, GPU, and memory specifications**  
