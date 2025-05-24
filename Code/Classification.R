@@ -587,30 +587,3 @@ probM=newdata$prob[,1]
 newdata$pred_y=ifelse(probM>0.5, "High","Low")
 
 confusionMatrix(as.factor(newdata1$Price), as.factor(newdata$pred_y))
-## Stacking ----
-
-library(caretEnsemble)
-set.seed(1234)
-classifiers<-c("regLogistic","nb","lda","knn","kknn","rf","C5.0","glm")
-models<-caretList(Price~., data=train2,
-                  trControl=trainControl(method="cv",number=10,classProbs=TRUE, savePredictions='final'),
-                  methodList=classifiers, preProcess=c("corr", "nzv"))
-results_en <- resamples(models)
-# plot of metrics over folds...of different classifiers..######
-bwplot(results_en)
-ens_ <- caretEnsemble(models, trControl=trainControl(classProbs=TRUE))
-
-staked.glm<-caretStack(models,method='glm', trControl=trainControl(classProbs=TRUE) )
-class(train2[,1])
-class(train2$Price)
-
-test$p6=predict(models$C5.0, test, "prob")[,1]
-test$p7=predict(staked.glm$models$rf, test, "prob")[,1]
-
-library(pROC)
-
-r6=roc(Price ~ p6, data = test)
-r7=roc(Price ~ p7, data = test)
-
-plot(r6)
-plot(r7, add=T,col="green")
