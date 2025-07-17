@@ -2,9 +2,8 @@
 ### Author: Salvatore Zizzi  
 
 ![R Version](https://img.shields.io/badge/R-%3E%3D%204.0-blue)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue)
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)
-![Last Commit](https://img.shields.io/github/last-commit/yourusername/yourrepo)
+![License](https://img.shields.io/badge/License-Apache%202.0-yellow)
+[![Author](https://img.shields.io/badge/Author-%20Salvatore_Zizzi-1DA1F2.svg)](https://www.linkedin.com/in/salvatore-zizzi-242151107/)
 
 ## Project Description
 This project aims to classify laptops into two categories — **High-end** and **Low-end** — based on their technical specifications and price, using machine learning techniques in R.
