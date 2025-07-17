@@ -1,7 +1,7 @@
 # Predicting Laptop Price Tiers in R Using Machine Learning  
 ### Author: Salvatore Zizzi  
 
-![R Version](https://img.shields.io/badge/R-%3E%3D%204.0-blue)
+[![R Version](https://img.shields.io/badge/R-%3E%3D%204.0-blue)](https://www.r-project.org/)
 ![License](https://img.shields.io/badge/License-Apache%202.0-yellow)
 [![Author](https://img.shields.io/badge/Author-%20Salvatore_Zizzi-1DA1F2.svg)](https://www.linkedin.com/in/salvatore-zizzi-242151107/)
 
